@@ -8,7 +8,6 @@ const Context = (props) => {
     const savedProducts = localStorage.getItem('products');
     if (savedProducts) {
       try {
-        console.log('Loading products from localStorage');
         return JSON.parse(savedProducts);
       } catch (error) {
         return [];
@@ -21,7 +20,6 @@ const Context = (props) => {
     const fetchProducts = async () => {
       try {
         const { data } = await axios('/products/');
-        console.log('Fetching products from API');
         setProducts(data);
         localStorage.setItem('products', JSON.stringify(data));
       } catch (error) {
