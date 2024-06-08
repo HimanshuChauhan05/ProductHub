@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-// import axios from "./axios";
 import Loading from "./Loading";
 import HomeBtn from "./HomeBtn";
 import { ProductContext } from "../utils/Context";

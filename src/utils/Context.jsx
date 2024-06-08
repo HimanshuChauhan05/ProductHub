@@ -11,7 +11,6 @@ const Context = (props) => {
         console.log('Loading products from localStorage');
         return JSON.parse(savedProducts);
       } catch (error) {
-        console.error('Error parsing products from localStorage:', error);
         return [];
       }
     }
@@ -26,7 +25,6 @@ const Context = (props) => {
         setProducts(data);
         localStorage.setItem('products', JSON.stringify(data));
       } catch (error) {
-        console.log('Error fetching products from API:', error);
       }
     };
 
@@ -36,7 +34,6 @@ const Context = (props) => {
   }, [products]);
 
   useEffect(() => {
-    console.log('Products state updated:', products);
   }, [products]);
 
   return (
